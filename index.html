@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Third-Party Libraries</title>
+  <meta name="description" content="">
+  <meta name="author" content="Matt Grasser">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h1>Third-Party Libraries</h1>
+  <h3>Matt Grasser</h3>
+
+<h4>15 Aug 2015 | Lesson 22 | C4Q AccessCode 2.1</h4>
+
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h2>Before we get started...</h2>
+  <p>A quick public service announcement...</p>
+
+<p><img src="dawson_crying.jpg" alt="Dawson Crying"></p>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>Congratulations!</h2>
+  <p>You&#39;ve made it a ton of the way through the C4Q AccessCode 2.1 curriculum. You&#39;re now well on your way to becoming an Android professional.</p>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h2>Want to take it to the next level?!</h2>
+  <p>Third-Party Libraries Can Help You Do It...Efficiently!</p>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h2>Today&#39;s Main Contenders</h2>
+  <ul>
+<li><a href="https://square.github.io/picasso/">Picasso</a></li>
+<li><a href="https://jakewharton.github.io/butterknife/">Butter Knife</a></li>
+<li><a href="https://square.github.io/retrofit/">Retrofit</a></li>
+<li><a href="http://parceler.org/">Parceler</a></li>
+<li><a href="https://square.github.io/dagger/">Dagger</a></li>
+<li><a href="https://github.com/codepath/android_guides/wiki/Must-Have-Libraries">...and more!</a></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-6'>
+  <h2>But Why?!</h2>
+  <p>To quote <a href="https://github.com/codepath">codepath</a> on github:</p>
+
+<pre><code>There are many third-party libraries for Android but several of them are 
+&quot;must have&quot; libraries that are extremely popular and are often used in 
+almost any Android project. Each has different purposes but all of them 
+make life as a developer much more pleasant. 
+</code></pre>
+
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h2>Ok, I see why. But how?!</h2>
+  <p>Let&#39;s get to some examples...</p>
+
+</section>
+<section class='' data-state='' id='slide-8'>
+  <h2>Example #1: Peter Griffin App</h2>
+  <ul>
+<li><strong>Goals</strong>:
+
+<ul>
+<li>Download an image of Peter Griffin</li>
+<li>Display it on the screen</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-9'>
+  <h2>Peter Griffin on Picasso</h2>
+  <p>We can do it better! Let&#39;s take a look at <a href="https://square.github.io/picasso/">Picasso</a> for a moment.</p>
+
+</section>
+<section class='' data-state='' id='slide-10'>
+  <h2>Benefits of Picasso</h2>
+  <ul>
+<li>Avoiding Common Pitfalls AUTOMATICALLY!
+
+<ul>
+<li>Handling ImageView recycling and download cancelation in an adapter.</li>
+<li>Complex image transformations with minimal memory use.</li>
+<li>Automatic memory and disk caching.</li>
+</ul></li>
+<li>Image handling can often be accomplished in a single line
+
+<ul>
+<li>Adapter Downloads (from web)</li>
+<li>Image Transformations (change your image in preset and custom manners)</li>
+<li>Local Resource Loading (drawables, local file location, File object)</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-11'>
+  <h2>Example #2: Peter Griffin Super App!</h2>
+  <ul>
+<li><strong>Goals</strong>:
+
+<ul>
+<li>Download an image of Peter Griffin</li>
+<li>Display it on the screen</li>
+<li>Display a button on the screen</li>
+<li>When the button is clicked, play an mp3 sound</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-12'>
+  <h2>Peter Griffin on Picasso with Butter Knife!</h2>
+  <p>Once again, we can do it better...let&#39;s look at <a href="http://www.thekeyconsultant.com/2013/09/5-reasons-you-should-use-butterknife.html">what people are saying</a> about a tool called <a href="https://jakewharton.github.io/butterknife/">Butter Knife</a></p>
+
+</section>
+<section class='' data-state='' id='slide-13'>
+  <h2>Benefits of Butter Knife</h2>
+  <ul>
+<li>No more findViewById casting!</li>
+<li>Bind Listeners
+
+<ul>
+<li>No more funky <code>view.setOnClickListener(new OnClickListener() { ...</code> stuff!</li>
+<li>No more funky <code>Activity implements OnClickListener</code> with <code>switch</code> statement!</li>
+</ul></li>
+<li>Bind target objects to View in addition to Activity objects</li>
+<li>Bind to View Lists and act on all objects at once!</li>
+<li>Automatic casting, even when you can&#39;t bind!</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-14'>
+  <h2>Pretty cool! What other tools are out there?</h2>
+  <p>Well, as a person who has spent a lot of time working with web APIs, my personal favorite in terms of simplifying code is Retrofit: &quot;A type-safe REST client for Android and Java.&quot;</p>
+
+<p>Before we dive in though let&#39;s do a quick review of REST APIs, as it&#39;s been a little while since it was covered <a href="https://github.com/accesscode-2-1/unit-2/blob/master/lessons/08_Async-REST.md">in a previous lesson</a>.</p>
+
+</section>
+<section class='' data-state='' id='slide-15'>
+  <h2>Quick Review: What is a Web API?</h2>
+  <p><img src="api_diagram.png" alt="API Diagram"></p>
+
+</section>
+<section class='' data-state='' id='slide-16'>
+  <h2>Quick Review: What is a Web API?</h2>
+  <p>The main purpose of an API is to do some processing or storage away from the device itself.</p>
+
+</section>
+<section class='' data-state='' id='slide-17'>
+  <h2>ReSTful APIs</h2>
+  <ul>
+<li>Verbs = HTTP Methods
+
+<ul>
+<li>Most common: POST, GET, PUT, DELETE</li>
+<li>Translates to CRUD: Create, Read, Update, Delete</li>
+<li>Less common: HEAD, PATCH, etc</li>
+</ul></li>
+<li>Nouns = Resources</li>
+<li>Query Params = Adjectives
+
+<ul>
+<li>URL Parameters</li>
+<li>Request Body</li>
+<li>Headers</li>
+</ul></li>
+<li>HTTP Response codes: 2xx, 4xx, 5xx</li>
+<li>Response bodies: JSON, XML, etc (we&#39;ll focus on the first)</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-18'>
+  <h2>Examples of ReSTful APIs</h2>
+  <ul>
+<li><a href="https://developer.github.com/v3/repos/">Github</a></li>
+<li><a href="https://developers.soundcloud.com/docs/api/reference">Soundcloud</a></li>
+<li><a href="https://stripe.com/docs/api">Stripe Payments</a></li>
+<li><a href="https://developers.facebook.com/docs/graph-api/overview/">Facebook API (yes, the graph is still ReSTful)</a></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-19'>
+  <h2>Java Methods for Communicating with External APIs</h2>
+  <ul>
+<li>HTTPRequest (inherited by HttpPost, HttpGet, etc)</li>
+<li>HTTPReponse (needs to be parsed manually or using a 3rd party lib)</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-20'>
+  <h2>Classic Android Way</h2>
+  <ul>
+<li>Permissions in manifest!</li>
+<li>AsyncTask (keep off the main thread!)</li>
+<li>Use the associated Java HTTPRequest method</li>
+<li>Parse the text of the HTTPResponse into a JSONObject</li>
+<li>Parse the JSONObject into a native Java Object</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-21'>
+  <h2>Example #3: Github App!</h2>
+  <ul>
+<li><strong>Goals</strong>:
+
+<ul>
+<li>Make a request to retrieve a <a href="https://developer.github.com/v3/repos/#list-user-repositories">list of repositories</a> for a given github user</li>
+<li>Convert those repos into Java objects</li>
+<li>Display in a list view</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-22'>
+  <h2>Github App + GSON + Retrofit</h2>
+  <p>Let&#39;s take a look at how we can strip this down even further! (A nice breakdown from start to finish for a general API can be found <a href="https://guides.codepath.com/android/Consuming-APIs-with-Retrofit">here</a>)</p>
+
+</section>
+<section class='' data-state='' id='slide-23'>
+  <h2>Benefits of Retrofit + GSON</h2>
+  <ul>
+<li>Many many many fewer lines of code to make the actual request</li>
+<li>Intelligent parsing of responses into native Objects</li>
+<li>Speed!</li>
+</ul>
+
+<p><img src="retrofit_metrics.png" alt="http://stackoverflow.com/a/18863395/604003"></p>
+
+</section>
+<section class='' data-state='' id='slide-24'>
+  <h2>We have the data, now what?</h2>
+  <p><a href="http://parceler.org/">Parceler</a> is an awesome tool for passing objects between views in an efficient manner.</p>
+
+</section>
+<section class='' data-state='' id='slide-25'>
+  <h2>Dependency Injection</h2>
+  <p>The value of Dependency Injection (DI) is explained quite well in <a href="https://www.youtube.com/watch?v=IKD2-MAkXyQ">this video</a>. Tools that incorporate the principles of DI in an elegant manner include:</p>
+
+<ul>
+<li>Butterknife for DI in views (why not RoboGuice? compile-time vs runtime reflection)</li>
+<li>Dagger for Dependency Injection (DI) of any Java Class</li>
+<li>Android Annotations for DI of any Java Class</li>
+</ul>
+
+<p>At this stage, I&#39;ll leave it as an exercise to familiarize yourself with these tools. Great discussion of the merits of Dagger vs. other DI libs can be found <a href="https://stackoverflow.com/questions/24351817/dagger-and-butter-knife-vs-android-annotations">here</a>.</p>
+
+</section>
+<section class='' data-state='' id='slide-26'>
+  <h2>The Sky&#39;s the Limit!</h2>
+  <p>There is so much more available in the ecosystem. Although Square&#39;s Jake Wharton tends to dominate the industry&#39;s conversation with his amazing open source tools, there are many more from all over the place.</p>
+
+</section>
+<section class='' data-state='' id='slide-27'>
+  <h2>Miscellaneous Libs</h2>
+  <p>For instance, for visual scanning there&#39;s <a href="https://github.com/zxing/zxing">ZXing</a>, a barcode scanner, and <a href="https://github.com/card-io/card.io-Android-SDK">Card.io</a>, a visual credit card number/expiration/name reader.</p>
+
+<p>For debugging there&#39;s <a href="https://github.com/JakeWharton/hugo">Hugo</a> for outputting messages and timing for annotated methods, and <a href="https://github.com/square/leakcanary">leakcanary</a> for reporting memory leaks.</p>
+
+</section>
+<section class='' data-state='' id='slide-28'>
+  <h2>The Sky&#39;s the Limit!</h2>
+  <p>A great aggregated collection of a wide variety of libraries can be found <a href="https://github.com/codepath/android_guides/wiki/Must-Have-Libraries">here</a>.</p>
+
+</section>
+<section class='' data-state='' id='slide-29'>
+  <h2>Have Fun With It!</h2>
+  <p>Cheers.</p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'sky', 
+    transition: Reveal.getQueryHash().transition || 'cube', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
